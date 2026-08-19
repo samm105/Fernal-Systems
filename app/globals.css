@@ -7,17 +7,17 @@ html {
 }
 
 body {
-  background-color: #0b0e13;
-  color: #e9ecf1;
+  background-color: #080b12;
+  color: #e9f2f1;
 }
 
 ::selection {
-  background: #ff5a3c;
-  color: #0b0e13;
+  background: #2dd4bf;
+  color: #080b12;
 }
 
 :focus-visible {
-  outline: 2px solid #ff5a3c;
+  outline: 2px solid #2dd4bf;
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -32,6 +32,6 @@ body {
 }
 
 .bg-noise {
-  background-image: radial-gradient(circle at 1px 1px, rgba(233, 236, 241, 0.05) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(233, 242, 241, 0.05) 1px, transparent 0);
   background-size: 22px 22px;
 }

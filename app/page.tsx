@@ -9,6 +9,7 @@ import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 import ToolsCarousel from "@/components/ToolsCarousel";
 import UseCases from "@/components/UseCases";
+import AuditOffer from "@/components/AuditOffer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <HowItWorks />
       <DemoVideo />
       <Benefits />
+      <AuditOffer />
       <Proof />
       <FAQ />
       <ContactCTA />

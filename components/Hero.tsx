@@ -2,10 +2,15 @@ import SignalDemo from "./SignalDemo";
 
 export default function Hero() {
   return (
-    <section id="top" className="bg-noise relative overflow-hidden border-b border-line pt-36 pb-24">
+    <section
+      id="top"
+      className="bg-noise relative overflow-hidden border-b border-line pt-36 pb-24"
+    >
       <div
         className="pointer-events-none absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, #ff5a3c 0%, transparent 70%)" }}
+        style={{
+          background: "radial-gradient(circle, #2DD4BF 0%, transparent 70%)",
+        }}
       />
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="animate-rise">
@@ -18,9 +23,9 @@ export default function Hero() {
             before it goes <span className="text-hot">cold</span>.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            Fernal Systems builds the response layer behind your contact form and inbox.
-            Every new lead is read, scored, and answered in under 90 seconds — then logged
-            wherever you already keep track of your leads.
+            Fernal Systems builds the response layer behind your contact form
+            and inbox. Every new lead is read, scored, and answered in under 90
+            seconds — then logged wherever you already keep track of your leads.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
