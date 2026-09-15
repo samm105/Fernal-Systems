@@ -12,8 +12,8 @@ export default function Nav() {
           Fernal Systems
         </Link>
         <nav className="hidden items-center gap-8 text-sm text-muted md:flex">
-          <Link href="/#how-it-works" className="transition hover:text-paper">
-            How it works
+          <Link href="/work" className="transition hover:text-paper">
+            Work
           </Link>
           <Link href="/process" className="transition hover:text-paper">
             Our process
