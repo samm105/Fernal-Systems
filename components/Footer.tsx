@@ -6,7 +6,11 @@ export default function Footer() {
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-hot" />
           <span className="font-display text-paper">Fernal Systems</span>
         </div>
-        <p className="font-mono text-xs">© {new Date().getFullYear()} Fernal Systems. All rights reserved.</p>
+        <p className="font-mono text-xs">
+          {" "}
+          {new Date().getFullYear()} Fernal Systems - AI Automations for service
+          businesses{" "}
+        </p>
       </div>
     </footer>
   );
