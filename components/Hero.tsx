@@ -7,12 +7,6 @@ export default function Hero() {
         id="top"
         className="bg-noise relative overflow-hidden border-b border-line pt-36 pb-24"
       >
-        <div
-          className="pointer-events-none absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full opacity-20 blur-3xl"
-          style={{
-            background: "radial-gradient(circle, #2DD4BF 0%, transparent 70%)",
-          }}
-        />
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="animate-rise">
             <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-faint">
@@ -46,7 +40,6 @@ export default function Hero() {
             <div className="mt-12 flex flex-wrap gap-x-10 gap-y-3 font-mono text-xs text-faint">
               <span>WORKS WITH YOUR EXISTING TOOLS</span>
               <span>NO NEW SOFTWARE TO LEARN</span>
-              {/* <span>BUILT AROUND YOUR ACTUAL WORKFLOW</span> */}
             </div>
           </div>
 
