@@ -8,16 +8,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#080B12",
-        panel: "#111820",
-        "panel-raised": "#182029",
-        line: "#233039",
-        paper: "#E9F2F1",
-        muted: "#8FA3A2",
-        faint: "#56696B",
-        hot: "#2DD4BF",
-        warm: "#5EEAD4",
-        cold: "#38BDF8",
+        ink: "#F3F2EE",
+        panel: "#F8F7F3",
+        "panel-raised": "#F1EFEA",
+        line: "#C8CEC6",
+        paper: "#151817",
+        muted: "#6F716D",
+        faint: "#9A9C97",
+        hot: "#164322",
+        warm: "#3F7650",
+        cold: "#667B6B",
+        pale: "#D7E3D8",
       },
       fontFamily: {
         display: ["var(--font-display)", "sans-serif"],
@@ -25,7 +26,7 @@ const config: Config = {
         mono: ["var(--font-mono)", "monospace"],
       },
       backgroundImage: {
-        grain: "radial-gradient(circle at 1px 1px, rgba(233,242,241,0.06) 1px, transparent 0)",
+        grain: "radial-gradient(circle at 1px 1px, rgba(21,24,23,0.05) 1px, transparent 0)",
       },
       keyframes: {
         blink: {
@@ -41,19 +42,55 @@ const config: Config = {
           "100%": { transform: "translateX(-50%)" },
         },
         "glow-cold": {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(56,189,248,0)", borderColor: "#233039" },
-          "15%": { boxShadow: "0 0 28px 2px rgba(56,189,248,0.35)", borderColor: "#38BDF8" },
-          "35%": { boxShadow: "0 0 0 0 rgba(56,189,248,0)", borderColor: "#233039" },
+          "0%, 100%": {
+            backgroundColor: "transparent",
+            borderColor: "#C8CEC6",
+            boxShadow: "0 0 0 rgba(102, 123, 107, 0)",
+          },
+          "15%": {
+            backgroundColor: "#D7E3D8",
+            borderColor: "#667B6B",
+            boxShadow: "0 8px 24px rgba(102, 123, 107, 0.2)",
+          },
+          "35%": {
+            backgroundColor: "transparent",
+            borderColor: "#C8CEC6",
+            boxShadow: "0 0 0 rgba(102, 123, 107, 0)",
+          },
         },
         "glow-warm": {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(94,234,212,0)", borderColor: "#233039" },
-          "15%": { boxShadow: "0 0 28px 2px rgba(94,234,212,0.35)", borderColor: "#5EEAD4" },
-          "35%": { boxShadow: "0 0 0 0 rgba(94,234,212,0)", borderColor: "#233039" },
+          "0%, 100%": {
+            backgroundColor: "transparent",
+            borderColor: "#C8CEC6",
+            boxShadow: "0 0 0 rgba(63, 118, 80, 0)",
+          },
+          "15%": {
+            backgroundColor: "#D3E2D5",
+            borderColor: "#3F7650",
+            boxShadow: "0 8px 24px rgba(63, 118, 80, 0.2)",
+          },
+          "35%": {
+            backgroundColor: "transparent",
+            borderColor: "#C8CEC6",
+            boxShadow: "0 0 0 rgba(63, 118, 80, 0)",
+          },
         },
         "glow-hot": {
-          "0%, 100%": { boxShadow: "0 0 0 0 rgba(45,212,191,0)", borderColor: "#233039" },
-          "15%": { boxShadow: "0 0 28px 2px rgba(45,212,191,0.4)", borderColor: "#2DD4BF" },
-          "35%": { boxShadow: "0 0 0 0 rgba(45,212,191,0)", borderColor: "#233039" },
+          "0%, 100%": {
+            backgroundColor: "transparent",
+            borderColor: "#C8CEC6",
+            boxShadow: "0 0 0 rgba(22, 67, 34, 0)",
+          },
+          "15%": {
+            backgroundColor: "#C9DCCB",
+            borderColor: "#164322",
+            boxShadow: "0 8px 24px rgba(22, 67, 34, 0.22)",
+          },
+          "35%": {
+            backgroundColor: "transparent",
+            borderColor: "#C8CEC6",
+            boxShadow: "0 0 0 rgba(22, 67, 34, 0)",
+          },
         },
         "dot-flow": {
           "0%": { transform: "translateX(-6px)", opacity: "0" },

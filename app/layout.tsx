@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fernal Systems — Leads answered before they go cold",
+  title: "Fernal Systems",
   description:
     "Fernal Systems builds AI response systems for service businesses. Every inbound lead gets read, scored, and answered in under 90 seconds — automatically.",
 };
@@ -35,8 +36,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body className="font-body antialiased">{children}</body>
+    <html
+      lang="en"
+      className={`${display.variable} ${body.variable} ${mono.variable}`}
+    >
+      <body className="font-body antialiased">
+        {children}
+        <ScrollReveal />
+      </body>
     </html>
   );
 }

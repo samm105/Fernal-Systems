@@ -25,7 +25,7 @@ export default function UseCases() {
   return (
     <section className="border-b border-line px-6 py-24">
       <div className="mx-auto max-w-6xl">
-        <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-faint">
+        <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted">
           <span className="h-1.5 w-1.5 rounded-full bg-hot" />
           Use cases
         </p>
@@ -49,7 +49,7 @@ export default function UseCases() {
                 <h3 className="font-display text-xl font-700 text-paper sm:text-2xl">
                   {useCase.title}
                 </h3>
-                <span className="shrink-0 font-mono text-xs text-faint">
+                <span className="shrink-0 font-mono text-xs text-muted">
                   {useCase.n}
                 </span>
               </div>

@@ -4,7 +4,10 @@ import { useEffect, useState } from "react";
 
 type Signal = "cold" | "warm" | "hot";
 
-const SIGNAL_STYLES: Record<Signal, { dot: string; text: string; label: string }> = {
+const SIGNAL_STYLES: Record<
+  Signal,
+  { dot: string; text: string; label: string }
+> = {
   cold: { dot: "bg-cold", text: "text-cold", label: "COLD" },
   warm: { dot: "bg-warm", text: "text-warm", label: "WARM" },
   hot: { dot: "bg-hot", text: "text-hot", label: "HOT" },
@@ -29,13 +32,16 @@ const SCRIPT = [
     name: "D. Patel",
     message: "What software do you use for this? Just curious.",
     signal: "cold" as Signal,
-    reply: "Hi D. Patel — thanks for the interest! Here's a quick overview of how it works...",
+    reply:
+      "Hi D. Patel — thanks for the interest! Here's a quick overview of how it works...",
   },
 ];
 
 export default function SignalDemo() {
   const [step, setStep] = useState(0);
-  const [phase, setPhase] = useState<"incoming" | "scoring" | "scored" | "reply">("incoming");
+  const [phase, setPhase] = useState<
+    "incoming" | "scoring" | "scored" | "reply"
+  >("incoming");
   const [elapsed, setElapsed] = useState(0);
 
   useEffect(() => {
@@ -85,7 +91,9 @@ export default function SignalDemo() {
       <div className="space-y-4 px-5 py-5">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-widest text-faint">from</p>
+            <p className="font-mono text-[11px] uppercase tracking-widest text-faint">
+              from
+            </p>
             <p className="font-display text-base text-paper">{current.name}</p>
           </div>
           <span className="rounded-full border border-line px-2 py-1 font-mono text-[11px] text-faint">
@@ -98,7 +106,9 @@ export default function SignalDemo() {
         </p>
 
         <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest">
-          {phase === "incoming" && <span className="text-faint">waiting for signal…</span>}
+          {phase === "incoming" && (
+            <span className="text-faint">waiting for signal…</span>
+          )}
           {phase === "scoring" && (
             <>
               <span className="h-2 w-2 animate-blink rounded-full bg-muted" />
@@ -115,13 +125,17 @@ export default function SignalDemo() {
 
         <div
           className={`overflow-hidden rounded-lg border border-line bg-ink/40 transition-all duration-500 ${
-            phase === "reply" ? "max-h-32 px-3 py-3 opacity-100" : "max-h-0 px-3 py-0 opacity-0"
+            phase === "reply"
+              ? "max-h-32 px-3 py-3 opacity-100"
+              : "max-h-0 px-3 py-0 opacity-0"
           }`}
         >
           <p className="font-mono text-[10px] uppercase tracking-widest text-faint">
             auto-reply sent
           </p>
-          <p className="mt-1 text-sm leading-relaxed text-paper">{current.reply}</p>
+          <p className="mt-1 text-sm leading-relaxed text-paper">
+            {current.reply}
+          </p>
         </div>
       </div>
     </div>

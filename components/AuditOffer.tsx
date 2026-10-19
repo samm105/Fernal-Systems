@@ -50,7 +50,7 @@ export default function AuditOffer() {
     <section className="border-b border-line bg-panel/30 px-6 py-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-faint">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
             Not ready for a full build?
           </p>
           <h2 className="mt-4 font-display text-3xl font-700 tracking-tight text-paper sm:text-4xl">
@@ -93,7 +93,7 @@ export default function AuditOffer() {
           >
             <div className="grid grid-cols-1 gap-5">
               <div>
-                <label className="font-mono text-xs uppercase tracking-widest text-faint">
+                <label className="font-mono text-xs uppercase tracking-widest text-muted">
                   Name
                 </label>
                 <input
@@ -105,7 +105,7 @@ export default function AuditOffer() {
                 />
               </div>
               <div>
-                <label className="font-mono text-xs uppercase tracking-widest text-faint">
+                <label className="font-mono text-xs uppercase tracking-widest text-muted">
                   Business
                 </label>
                 <input
@@ -116,7 +116,7 @@ export default function AuditOffer() {
                 />
               </div>
               <div>
-                <label className="font-mono text-xs uppercase tracking-widest text-faint">
+                <label className="font-mono text-xs uppercase tracking-widest text-muted">
                   Email
                 </label>
                 <input
@@ -141,7 +141,7 @@ export default function AuditOffer() {
                 Something went wrong — try again, or email directly instead.
               </p>
             )}
-            <p className="mt-3 text-center font-mono text-[11px] text-faint">
+            <p className="mt-3 text-center font-mono text-[11px] text-muted">
               No payment is taken here — we'll follow up by email to confirm and
               arrange it.
             </p>

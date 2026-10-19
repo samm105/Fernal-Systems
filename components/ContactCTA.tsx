@@ -132,7 +132,7 @@ export default function ContactCTA() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="mt-6 w-full rounded-full bg-paper px-6 py-3 text-sm font-semibold text-ink transition hover:bg-hot"
+            className="mt-6 w-full rounded-full bg-hot px-6 py-3 text-sm font-semibold text-ink transition hover:brightness-110"
           >
             {status === "sending" ? "Sending…" : "Send"}
           </button>
