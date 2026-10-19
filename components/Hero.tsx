@@ -47,7 +47,9 @@ export default function Hero() {
             <p className="font-mono text-[11px] uppercase tracking-widest text-faint">
               One system, live — lead response
             </p>
-            <SignalDemo />
+            <div className="flex min-h-[26rem] w-full items-start justify-center sm:min-h-[24rem] lg:justify-end">
+              <SignalDemo />
+            </div>
           </div>
         </div>
       </section>

@@ -119,7 +119,11 @@ export default function ProcessPage() {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-3xl">
           {PHASES.map((phase, i) => (
-            <div key={phase.n} className="relative flex gap-6 pb-14 last:pb-0">
+            <div
+              key={phase.n}
+              data-reveal /* ← added: each step fades in as you scroll to it */
+              className="relative flex gap-6 pb-14 last:pb-0"
+            >
               {i < PHASES.length - 1 && (
                 <span
                   aria-hidden
@@ -149,6 +153,7 @@ export default function ProcessPage() {
                   {phase.points.map((point) => (
                     <li
                       key={point}
+                      data-reveal /* ← added: bullets follow the step, one after another */
                       className="flex items-start gap-2.5 text-sm text-muted"
                     >
                       <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-faint" />

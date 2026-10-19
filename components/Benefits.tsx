@@ -31,14 +31,21 @@ export default function Benefits() {
   return (
     <section className="border-b border-line bg-panel/30 px-6 py-24">
       <div className="mx-auto max-w-6xl">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-faint">Why it matters</p>
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">Why it matters</p>
         <h2 className="mt-4 max-w-xl font-display text-3xl font-700 tracking-tight text-paper sm:text-4xl">
           Built for how leads actually behave.
         </h2>
 
-        <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
-          {BENEFITS.map((b) => (
-            <div key={b.title} className="flex gap-4">
+        <div className="mt-14 grid grid-cols-1 border-t border-line sm:grid-cols-2">
+          {BENEFITS.map((b, i) => (
+            <div
+              key={b.title}
+              className={`flex gap-4 border-line px-1 py-9 sm:px-8 ${
+                i < 3 ? "border-b sm:border-b-0" : ""
+              } ${i < 2 ? "sm:border-b" : ""} ${
+                i % 2 === 0 ? "sm:border-r" : ""
+              }`}
+            >
               <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${DOT[b.signal]}`} />
               <div>
                 <h3 className="font-display text-lg font-700 text-paper">{b.title}</h3>

@@ -50,7 +50,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="border-b border-line px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-faint">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
             How it works
           </p>
           <h2 className="mt-4 font-display text-3xl font-700 tracking-tight text-paper sm:text-4xl">
@@ -67,10 +67,11 @@ export default function HowItWorks() {
           {CORE_STEPS.map((step, i) => (
             <div
               key={step.n}
+              data-reveal /* ← added: each step card fades in one after another */
               style={{ animationDelay: `${i * 1.1}s` }}
               className={`relative rounded-2xl border border-line bg-panel/60 p-7 ${step.glow}`}
             >
-              <span className="font-mono text-sm text-faint">{step.n}</span>
+              <span className="font-mono text-sm text-muted">{step.n}</span>
               <h3 className="mt-4 font-display text-xl font-700 text-paper">
                 {step.title}
               </h3>
@@ -93,12 +94,15 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="mt-20 rounded-2xl border border-line bg-panel/30 p-8 sm:p-10">
+        <div
+          data-reveal /* ← added: the whole "If a lead goes quiet" panel */
+          className="mt-20 rounded-2xl border border-line bg-panel/30 p-8 sm:p-10"
+        >
           <div className="flex flex-wrap items-center gap-3">
             <h3 className="font-display text-xl font-700 text-paper">
               If a lead goes quiet
             </h3>
-            <span className="rounded-full border border-line px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-faint">
+            <span className="rounded-full border border-line px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-muted">
               Growth tier
             </span>
           </div>
@@ -110,9 +114,13 @@ export default function HowItWorks() {
 
           <div className="mt-10 flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-4">
             {DRIP_STEPS.map((step, i) => (
-              <div key={step.label} className="relative flex-1">
+              <div
+                key={step.label}
+                data-reveal /* ← added: Day 0, follow-up, final follow-up appear in sequence */
+                className="relative flex-1"
+              >
                 <div className="flex items-center gap-3 lg:block">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line bg-ink/60 font-mono text-[11px] text-faint">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line bg-ink/60 font-mono text-[11px] text-muted">
                     {i + 1}
                   </span>
                   {i < DRIP_STEPS.length - 1 && (
@@ -122,7 +130,7 @@ export default function HowItWorks() {
                     />
                   )}
                 </div>
-                <p className="mt-3 font-mono text-[11px] uppercase tracking-widest text-faint">
+                <p className="mt-3 font-mono text-[11px] uppercase tracking-widest text-muted">
                   {step.label}
                 </p>
                 <h4 className="mt-1 font-display text-base font-700 text-paper">
@@ -135,7 +143,10 @@ export default function HowItWorks() {
             ))}
           </div>
 
-          <div className="mt-8 flex items-center gap-2.5 border-t border-line pt-6">
+          <div
+            data-reveal /* ← added: the closing "a reply stops the sequence" line */
+            className="mt-8 flex items-center gap-2.5 border-t border-line pt-6"
+          >
             <span className="h-2 w-2 shrink-0 animate-blink rounded-full bg-hot" />
             <p className="text-sm text-paper">
               A reply on any message, at any point, stops the sequence
